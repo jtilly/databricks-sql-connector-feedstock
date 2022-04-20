@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-	  - pandas >= 1.0.0
+    - pandas >= 1.0.0
     - pyarrow >= 5.0.0
     - thrift >=0.13.0
 
