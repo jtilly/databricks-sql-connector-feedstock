@@ -1,5 +1,5 @@
 {% set name = "databricks-sql-connector" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/databricks-sql-connector-{{ version }}.tar.gz
-  sha256: b74bb176571ba6107c3610b04ec875bf52951c50e515bea8abb2ffb8fe4c90d7
+  sha256: 0173eb74c15f8b7c7defd15c12e69bd7ad1dd11a29121744900661d93dc8ba81
 
 build:
   noarch: python
@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.7.1,<4.0.0
     - pip
+    - poetry-core >=1.0.0
   run:
-    - python >=3.7
-    - pandas >=1.3.0
-    - pyarrow >=5.0.0
-    - thrift >=0.13.0
+    - python >=3.7.1,<4.0.0
+    - pandas >=1.3.0,<2.0.0
+    - pyarrow >=5.0.0,<6.0.0
+    - thrift >=0.13.0,<0.14.0
 
 test:
   imports:
