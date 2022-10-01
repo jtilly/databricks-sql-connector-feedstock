@@ -1,5 +1,5 @@
 {% set name = "databricks-sql-connector" %}
-{% set version = "2.0.5" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/databricks-sql-connector-{{ version }}.tar.gz
-  sha256: f744fe26010d7798e4bb7a9c6106a2bf2cb6da63381b8e2e7b0a4beae374c0cd
+  sha256: 181007919044c8c21b63232fa8b3d3054a65343f4f37eb40fef93b7fee3ddc19
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
-
+  
 requirements:
   host:
-    - python >=3.7.1,<4.0.0
+    - python >=3.6,<4.0
     - pip
     - poetry-core >=1.0.0
   run:
-    - python >=3.7.1,<4.0.0
+    - python >=3.6,<4.0
+    - oauthlib >=3.1.0
     - pandas >=1.3.0,<2.0.0
     - pyarrow >=9.0.0,<10.0.0
+    - requests >2.18.1
     - thrift >=0.13.0,<0.14.0
 
 test:
@@ -37,6 +39,7 @@ about:
   home: https://databricks.com
   summary: Databricks SQL Connector for Python
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   doc_url: https://docs.databricks.com/dev-tools/python-sql-connector.html
 
