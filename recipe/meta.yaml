@@ -21,18 +21,18 @@ requirements:
     - poetry-core >=1.0.0
   run:
     - python >=3.7.1,<4.0
-    - alembic >=1.8.1,<2.0.0
-    - lz4 >=4.0.2,<5.0.0
-    # more restrictive python 3.11 requirement for noarch
-    - numpy >=1.23.4
-    - oauthlib >=3.1.0,<4.0.0
-    - openpyxl >=3.0.10,<4.0.0
+    - thrift >=0.16.0,<0.17.0
     - pandas >=1.3.0,<2.0.0
     # more restrictive python 3.11 requirement for noarch
     - pyarrow >=10.0.1
+    - lz4 >=4.0.2,<5.0.0
     - requests >=2.18.1,<3.0.0
+    - oauthlib >=3.1.0,<4.0.0
+    # more restrictive python 3.11 requirement for noarch
+    - numpy >=1.23.4
     - sqlalchemy >=1.4.44,<2.0.0
-    - thrift >=0.16.0,<0.17.0
+    - openpyxl >=3.0.10,<4.0.0
+    - alembic >=1.8.1,<2.0.0
 
 test:
   imports:
