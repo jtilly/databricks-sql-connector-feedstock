@@ -9,6 +9,8 @@ Package license: Apache-2.0
 
 Summary: Databricks SQL Connector for Python
 
+Development: https://github.com/databricks/databricks-sql-python
+
 Documentation: https://docs.databricks.com/dev-tools/python-sql-connector.html
 
 Current build status
