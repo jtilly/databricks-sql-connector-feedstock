@@ -1,5 +1,5 @@
 {% set name = "databricks-sql-connector" %}
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5def7762a398e025db6a5740649f3ea856f07dc04a87cb7818af335f4157c030
+  sha256: 5d08341c81dad16920c5a2e9e2de2456f04bd08d327018bab392354c0734b122
 
 build:
   noarch: python
